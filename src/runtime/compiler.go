@@ -4,13 +4,6 @@
 
 package runtime
 
-// Compiler is the name of the compiler toolchain that built the
-// running binary. Known toolchains are:
-//
-//	gc      Also known as cmd/compile.
-//	gccgo   The gccgo front end, part of the GCC compiler suite.
-//
-
 // Compiler 是构建运行的二进制文件的编译器工具链的名称。已知的工具链有:
 //
 //	gc      也称为 cmd/compile.
