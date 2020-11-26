@@ -476,20 +476,14 @@ func (r *StackRecord) Stack() []uintptr {
 	return r.Stack0[0:]
 }
 
-// MemProfileRate controls the fraction of memory allocations
-// that are recorded and reported in the memory profile.
-// The profiler aims to sample an average of
-// one allocation per MemProfileRate bytes allocated.
+// MemProfileRate 控制 memory profile 中记录和报告的内存分配比例。
+// profiler 的目标是为每个分配的 MemProfileRate bytes 抽样一个分配平均值。
 //
-// To include every allocated block in the profile, set MemProfileRate to 1.
-// To turn off profiling entirely, set MemProfileRate to 0.
+// 要在 profile 中包含每个已分配的块，请将 MemProfileRate 设置为 1。
+// 若要完全关闭分析，设置 MemProfileRate 为 0。
 //
-// The tools that process the memory profiles assume that the
-// profile rate is constant across the lifetime of the program
-// and equal to the current value. Programs that change the
-// memory profiling rate should do so just once, as early as
-// possible in the execution of the program (for example,
-// at the beginning of main).
+// 处理 memory profiles 的工具假设 profile 速率在程序的整个生命周期内是恒定的，并且等于当前值。
+// 改变内存分析速率的程序应该只改变一次，在程序执行时尽早改变(例如，在 main 的开始)。
 var MemProfileRate int = 512 * 1024
 
 // A MemProfileRecord describes the live objects allocated
