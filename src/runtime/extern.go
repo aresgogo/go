@@ -201,11 +201,9 @@ func Version() string {
 	return sys.TheVersion
 }
 
-// GOOS is the running program's operating system target:
-// one of darwin, freebsd, linux, and so on.
-// To view possible combinations of GOOS and GOARCH, run "go tool dist list".
+// GOOS 是运行程序的操作系统目标: darwin、freebsd、linux 等当中的一个。
+// 要查看 GOOS 和 GOARCH 的可能组合，请运行“go tool dist list”。
 const GOOS string = sys.GOOS
 
-// GOARCH is the running program's architecture target:
-// one of 386, amd64, arm, s390x, and so on.
+// GOARCH 是运行程序的体系结构目标: 386、amd64、arm、s390x 等当中的一个。
 const GOARCH string = sys.GOARCH
